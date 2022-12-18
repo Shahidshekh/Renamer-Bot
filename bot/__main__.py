@@ -1,4 +1,4 @@
-from pyrogram import Client, filters
+from pyrogram import Client, filters, idle
 
 app = Client(
     name="Renamer Bot",
@@ -13,3 +13,10 @@ app.start()
 @app.on_message(filters=filters.command('start'))
 def start(app, message):
     message.reply("hello")
+
+
+print("Bot Started")
+
+idle()
+
+app.stop()
